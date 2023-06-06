@@ -15,6 +15,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "d91d0de1-b62b-49dd-b246-965a5adde103",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Interact",
                     "type": "Button",
                     "id": "d179a41c-0bdb-4bc2-b0e6-90e3a4850bee",
@@ -22,15 +31,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Track",
-                    "type": "Value",
-                    "id": "9a0c9ac3-358e-4681-ab17-095f1d824af3",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -102,23 +102,12 @@
                 },
                 {
                     "name": "",
-                    "id": "ff070d47-9d17-4f1e-9fa5-ff439d0e8e2f",
-                    "path": "<Mouse>/delta/x",
+                    "id": "46117cb1-06e1-4a74-8300-27bc3be181c1",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Track",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6d90ddba-0bc7-4aff-bc0a-4fdeec194709",
-                    "path": "<Mouse>/delta/y",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Track",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
