@@ -357,14 +357,20 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/IKEA/Characters/Attacker.cs"
 "Assets/IKEA/Characters/Death.cs"
-"Assets/IKEA/Characters/Healingable.cs"
 "Assets/IKEA/Characters/Health.cs"
+"Assets/IKEA/Characters/Main Character/Healingable.cs"
 "Assets/IKEA/Characters/Main Character/InputSystem/PlayerInput.cs"
 "Assets/IKEA/Characters/Main Character/Mouse.cs"
 "Assets/IKEA/Characters/Main Character/Player.cs"
-"Assets/IKEA/Objects/Prefabs/Object.cs"
+"Assets/IKEA/Characters/Workers/WorkerNav.cs"
+"Assets/IKEA/Objects/Prefabs/Food/Object.cs"
+"Assets/IKEA/Objects/Prefabs/Rifle/Scripts/Bullet.cs"
+"Assets/IKEA/Objects/Prefabs/Rifle/Scripts/Gun.cs"
 "Assets/IKEA/Objects/ScriptableObjects/ObjectSO.cs"
+"Assets/IKEA/UI/Scripts/DeathScreen.cs"
+"Assets/IKEA/UI/Scripts/HealthBar.cs"
 -langversion:9.0
 
 /deterministic

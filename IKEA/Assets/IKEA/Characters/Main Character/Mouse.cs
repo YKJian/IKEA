@@ -11,13 +11,13 @@ public class Mouse : MonoBehaviour
     [SerializeField] private Transform _character;
     
     [SerializeField] private float _sensitivity;
-    float _mouseX;
-    float _mouseY;
+    private float _mouseX;
+    private float _mouseY;
 
-    private void Awake()
+    /*private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
-    }
+    }*/
 
     private void FixedUpdate()
     {
@@ -29,7 +29,8 @@ public class Mouse : MonoBehaviour
         _mouseX += Input.GetAxis("Mouse X") * _sensitivity;
         _mouseY += Input.GetAxis("Mouse Y") * _sensitivity;
         // ограничение движения головы
-        _mouseY = Mathf.Clamp(_mouseY, -30, 40);
+        // нижнее, верхнее
+        _mouseY = Mathf.Clamp(_mouseY, -28, 40);
         
         var _mouseHeadNext = Quaternion.Euler(-_mouseY, _mouseX, 0f);
         var _mousePlayerNext = Quaternion.Euler(0f, _mouseX, 0f);

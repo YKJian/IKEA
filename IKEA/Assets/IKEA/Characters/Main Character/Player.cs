@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     private PlayerInput _inputs;
     [SerializeField] private float _speed;
 
+    [SerializeField] private GameObject _finishScreen;
+
     [SerializeField] private Transform _floorCheckerPivot;
     [SerializeField] private float _checkFloorRadius;
     [SerializeField] private LayerMask _floorMask;
@@ -16,16 +18,16 @@ public class Player : MonoBehaviour
     private Rigidbody _rb;
     private bool _isGrounded;
 
+    private AudioSource _audio;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
+        _audio = GetComponent<AudioSource>();
 
         _inputs = new PlayerInput();
         _inputs.Player.Enable();
-    }
 
-    private void Start()
-    {
         _inputs.Player.Jump.performed += Jump_performed;
     }
 
@@ -33,6 +35,20 @@ public class Player : MonoBehaviour
     {
         Walk();
         _isGrounded = IsOnTheGround();
+
+        /*if (this == null)
+        {
+            _inputs.Player.Disable();
+        }*/
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Finish")
+        {
+            _audio.Play();
+            _finishScreen.SetActive(true);
+        }
     }
 
     private void Walk()
